@@ -1,0 +1,22 @@
+{
+  "name": "project-2-open-to-intern-group-35",
+  "version": "1.0.0",
+  "description": "intern project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AstickDutta/Project-2-Open-to-Intern-Group-35.git"
+  },
+  "author": "Ashutosh Kumar, Astick Dutta, Anand Pal, Stuti Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AstickDutta/Project-2-Open-to-Intern-Group-35/issues"
+  },
+  "homepage": "https://github.com/AstickDutta/Project-2-Open-to-Intern-Group-35#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
