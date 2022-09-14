@@ -7,6 +7,6 @@ const getController = require('../controller/getController')
 
 routes.post('/functionup/interns', internController.createIntern)
 routes.post('/functionup/colleges', collegeController.createCollege)
-routes.get('/functionup/colleges', getController.getCollegeDetails)
+routes.get('/functionup/collegeDetails', getController.getCollegeDetails)
 
 module.exports = routes
