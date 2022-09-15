@@ -23,6 +23,7 @@ const createIntern = async (req, res) => {
     try {
 
         const { name, email, mobile, collegeName, isDeleted } = req.body
+
         if (_.isEmpty(req.body)) {
             return res.status(400).send({ status: false, messgae: "Oppss..!! All fields are mendatory...." })
         }
@@ -76,7 +77,7 @@ const createIntern = async (req, res) => {
 
             // =============================== if intern are already registered ====================================================
 
-            let findAllIntern = await internModel.find({ $or: [{ email: email }, { name: name }, { mobile: mobile }] })
+            let findAllIntern = await internModel.find({ $or: [{ email: email }, { mobile: mobile }] })
             if (findAllIntern.length > 0) return res.status(400).send({ status: false, message: "Hey..!! You are already Registered.." })
 
             // ================================== if college not found ==========================================================
