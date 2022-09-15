@@ -4,14 +4,14 @@ const internModel = require('../model/internModel')
 // ===================================== College Details ==============================================================
 
 
-const getCollegeDetails = async function (req, res) {
+const getCollegeDetails = async (req, res) => {
     try {
         const collegeName = req.query.collegeName
 
 // ============================ provide data to fetch the details ==============================================================
 
         if (!collegeName) {
-            return res.status(400).send({ status: false, message: "Please provide data to fetch the details" })
+            return res.status(400).send({ status: false, message: "Oppss..!! please provide data to fetch the details" })
         }
         const result = {}
 
@@ -20,7 +20,7 @@ const getCollegeDetails = async function (req, res) {
 
         const collegeData = await collegeModel.findOne({ name: collegeName, isDeleted: false })
         if (!collegeData) {
-            return res.status(404).send({ status: false, message: "collegeName doesn't Exit" })
+            return res.status(404).send({ status: false, message: "Oh noo..!! collegeName doesn't Exit" })
         }
 
         // ================================== get all interns related to this college _id ===================================================================
@@ -35,7 +35,7 @@ const getCollegeDetails = async function (req, res) {
         // ========================== if no intern applied ===================================================================
         
         if (Object.keys(internList).length == 0) {
-            return res.status(400).send({ status: false, message: "No intern applied" })
+            return res.status(400).send({ status: false, message: "Oppss..!! No intern applied" })
         }
 
         return res.status(200).send({ status: true, message: result })
@@ -46,4 +46,4 @@ const getCollegeDetails = async function (req, res) {
 }
 
 
-module.exports.getCollegeDetails = getCollegeDetails
+module.exports =  { getCollegeDetails }
