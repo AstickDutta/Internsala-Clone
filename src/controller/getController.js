@@ -1,6 +1,5 @@
 const collegeModel = require ('../model/collegeModel')
 const internModel = require ('../model/internModel')
-const mongoose = require ('mongoose')
 
 // =====================================College Details==============================================================
 
