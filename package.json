@@ -24,6 +24,7 @@
     "lodash": "^4.17.21",
     "mongoose": "^6.6.0",
     "nodemon": "^2.0.19",
-    "validate-phone-number-node-js": "^0.0.1"
+    "validate-phone-number-node-js": "^0.0.1",
+    "validator": "^13.7.0"
   }
 }

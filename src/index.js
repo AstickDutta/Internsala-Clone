@@ -17,11 +17,11 @@ mongoose.connect("mongodb+srv://Astick_Dutta:AavSNrGfPyPswMGg@cluster0.laksbb0.m
     .catch(err => console.log(err))
 
 
-app.use('/', route)
+app.use(route)
 
 app.use((req, res, next) => {
-    res.status(400).send({status: false ,error: "Not found" });
-   })
+    res.status(400).send({ status: false, error: "Not found" });
+})
 
 
 app.listen(process.env.PORT || 3000, function () {

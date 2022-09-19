@@ -8,7 +8,7 @@ const getCollegeDetails = async (req, res) => {
     try {
         const collegeName = req.query.collegeName
 
-// ============================ provide data to fetch the details ==============================================================
+        // ============================ provide data to fetch the details ==============================================================
 
         if (!collegeName) {
             return res.status(400).send({ status: false, message: "Oppss..!! please provide data to fetch the details" })
@@ -33,7 +33,7 @@ const getCollegeDetails = async (req, res) => {
         result.interns = internList
 
         // ========================== if no intern applied ===================================================================
-        
+
         if (Object.keys(internList).length == 0) {
             return res.status(400).send({ status: false, message: "Oppss..!! No intern applied" })
         }
@@ -46,4 +46,4 @@ const getCollegeDetails = async (req, res) => {
 }
 
 
-module.exports =  { getCollegeDetails }
+module.exports = { getCollegeDetails }
