@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 
 
 
+
 mongoose.connect("mongodb+srv://Astick_Dutta:AavSNrGfPyPswMGg@cluster0.laksbb0.mongodb.net/internProjectG35-DB", {
     useNewUrlParser: true
 })
@@ -24,6 +25,6 @@ app.use((req, res, next) => {
 })
 
 
-app.listen(process.env.PORT || 3000, function () {
+app.listen(process.env.PORT || 3000, function ()  {
     console.log('Express app running on port ' + (process.env.PORT || 3000))
 });
